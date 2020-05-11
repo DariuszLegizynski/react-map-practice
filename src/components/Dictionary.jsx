@@ -1,19 +1,15 @@
 import React from "react";
 import emojipedia from "../emojipedia";
+import Entry from "./Entry";
 
-function createEntry(props){
+function createEntry(emojiStruct){
     return(
-        <div className="term">
-       <dt>
-        <span className="emoji" role="img" aria-label="Tense Biceps">
-          {props.emojiIcon}
-        </span>
-        <span>{props.emojiName}</span>
-      </dt>
-      <dd>
-        {props.emojiDescription}
-      </dd>
-    </div>
+    <Entry
+        key = {emojiStruct.id}
+        emojiIcon = {emojiStruct.icon}
+        emojiName = {emojiStruct.name}
+        emojiDescription = {emojiStruct.meaning}
+     />
     )
 }
 
